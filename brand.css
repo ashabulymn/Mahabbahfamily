@@ -1,0 +1,39 @@
+/* Palette from public_html/src/css/style.css; original logo is unmodified. */
+:root{--brand-dark:#020617;--brand-gold:#eecc19;--brand-primary:#f59e0b;--brand-green:#3a7930;--wine:var(--brand-green);--wine-dark:var(--brand-dark);--gold:var(--brand-gold);--cream:#fff;--paper:#fff;--ink:var(--brand-dark);--muted:#626970;--line:#dce3db}
+body{background:var(--paper);color:var(--ink)}
+.announcement{background:var(--brand-primary);color:var(--brand-dark)}
+.site-header,body>header{background:var(--brand-dark);color:#fff}
+.brand,.sub-header .brand{display:flex;align-items:center;flex-shrink:0}
+.brand-logo{display:block;width:203px;height:37px;object-fit:contain;filter:none}
+.site-header nav a:hover,.site-header nav .active,.header-cta{color:var(--brand-gold)}
+.site-header nav .active:after{background:var(--brand-gold)}
+.header-cta{border-color:var(--brand-gold)}
+.menu-toggle{color:var(--brand-gold);border-color:var(--brand-gold);background:transparent}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:var(--brand-primary)}
+.hero,.hero-visual,.about{background:var(--brand-dark)}
+.hero .eyebrow,.hero h1 em,.hero .arabic,.image-caption h2 em,.about .eyebrow,.about h2 em,.about-label,.about-copy>.text-link{color:var(--brand-gold)}
+.hero .button-wine{background:var(--brand-gold);color:var(--brand-dark)}
+.hero .button-wine:hover{background:var(--brand-primary)}
+.button-wine:hover{background:var(--brand-dark)}
+.video-toggle{background:#020617cc;color:#fff;border-color:var(--brand-gold)}
+.image-shade{background:linear-gradient(90deg,#020617e8,#02061780 42%,#0206170a 78%),linear-gradient(0deg,#020617b3,transparent 38%)}
+.about-art:after{background:linear-gradient(90deg,#02061710,#020617ed 70%)}
+.card-kicker,.story-card:before,.journeys .eyebrow:before,.manifesto-arabic{color:var(--brand-green)}
+.testimonials-section,.availability-banner,#editor-panel,.media-item img{background:#f0f5ef}
+.testimonial{border-color:var(--line)}
+.consultation{background:var(--brand-green);color:#fff}
+.consultation .eyebrow,.consultation h2 em,.closing-signature>span:last-child{color:var(--brand-gold)}
+.closing-aside>p,.cta-note,.closing-signature>span:first-child{color:#fff}
+.button-cream{color:#fff;border-color:var(--brand-gold)}
+.button-cream:hover{background:var(--brand-dark)}
+footer,.journal-footer{background:var(--brand-dark);color:#fff}
+.footer-main{align-items:center}
+.footer-main .brand{display:flex}
+.footer-main>p,.footer-main>a,.footer-bottom,.design-note,.journal-footer a{color:#fff}
+.footer-main>a small{color:var(--brand-gold)}
+.footer-bottom,.journal-footer{border-color:#ffffff35}
+.journal-footer .brand{margin-bottom:24px;text-decoration:none}
+body>header>a{color:#fff}
+input,textarea,select{background:#fff;color:var(--brand-dark)}
+@media(max-width:1100px) and (min-width:801px){.site-header{gap:18px;padding:0 4%}.site-header .brand-logo{width:170px;height:auto}.site-header nav{gap:10px}.site-header nav a{font-size:10px}}
+@media(max-width:800px){.brand-logo{width:190px;height:auto}.site-header nav{background:var(--brand-dark);color:#fff}.sub-header nav{background:transparent}.image-shade{background:linear-gradient(90deg,#020617e0,#02061765),linear-gradient(0deg,#020617bf,transparent 50%)}.about-art:after{background:linear-gradient(0deg,#020617fa 35%,#02061715)}.footer-main .brand{flex-basis:100%}}
