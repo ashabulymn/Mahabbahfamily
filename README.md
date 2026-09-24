@@ -10,6 +10,18 @@ Bio Instagram @mahabbahfamilytourtravel berhasil dibaca melalui browser pada 21 
 
 `contact.js` menyajikan kontak dan chatbox pada beranda, blog, galeri, serta detail paket. Form GET membuka draf pesan ke nomor WhatsApp resmi, tanpa menyimpan pesan atau mengirim otomatis. Pengguna tetap menekan Kirim di WhatsApp. Kontak dikelola di kode ini (belum menjadi koleksi CMS). Dialog konsultasi juga membawa pesan yang telah diedit ke WhatsApp. Tidak ada audio atau embed Instagram otomatis.
 
+## Deploy website publik ke Netlify
+
+`netlify.toml` menjalankan `node scripts/build-static.js` dan mempublikasikan hanya folder `dist`. Node.js 22 dipilih otomatis. Hubungkan repository/branch yang memuat konfigurasi ini, lalu deploy ulang. Jika ada pengaturan manual, gunakan build command tersebut dan publish directory `dist`, bukan root repository.
+
+Build merender beranda (paket, tim, testimoni, blog, kontak), daftar blog, artikel terbit, galeri, dan detail semua paket terbit menjadi HTML. CSS, JavaScript, video, logo, dan gambar yang dirujuk konten terbit ikut disalin. URL detail dapat dibuka langsung atau direfresh; tidak perlu redirect semua URL ke beranda. Draf, kredensial, data JSON, source server, dan lampiran tidak dipublikasikan.
+
+Sumber build Netlify adalah `data/seed.json` yang tersimpan di Git, bukan `data/content.json` lokal yang diabaikan Git. Perbarui sumber konten serta aset media, commit/push, lalu deploy ulang untuk memperbarui situs. Label ketersediaan dihitung saat build; lakukan rebuild setelah tanggal berlaku berubah/lewat. Jangan memasukkan kredensial atau informasi privat ke sumber konten.
+
+**Batasan:** ini deployment publik statis, bukan CMS server. `/admin` menampilkan pemberitahuan, bukan form login yang tidak berfungsi. Login, edit konten, dan upload membutuhkan deployment Node.js dengan penyimpanan persisten. Server lokal yang ada tetap bekerja seperti sebelumnya. Konten publik dapat ditampilkan tanpa backend; kemampuan CMS tidak dijanjikan pada Netlify statis.
+
+Build lokal: `node scripts/build-static.js`. Folder `dist` adalah hasil build dan tidak perlu di-commit.
+
 ## Jalankan dan login
 
 Node.js **22 atau lebih baru**, tanpa dependency tambahan. Dari direktori proyek:
